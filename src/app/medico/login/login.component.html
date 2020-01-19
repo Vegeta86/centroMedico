@@ -1,0 +1,10 @@
+<h1>Ingreso de usuarios</h1>
+
+<form [formGroup]="formularioLogin">
+  <p>Nombre</p>
+  <input type="text" formControlName="nombre" name="nombre" id="nombre">
+  <p>Contraseña</p>
+  <input type="password" formControlName="password" name="password" id="password">
+  <br><br>
+  <button (click)="enviarLogin()">Ingresar</button>
+</form>

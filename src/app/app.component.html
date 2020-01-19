@@ -1,0 +1,10 @@
+<nav>
+  <a [routerLink]="['login']">Login</a>
+  <a [routerLink]="['crearPaciente']">Ficha Paciente</a>
+  <a [routerLink]="['crearFicha']">Ficha Atencion</a>
+  <a [routerLink]="['listaPacientes']">Lista Pacientes</a>
+  <a [routerLink]="['pacientes']">Historial de atenciones(Medico)</a>
+  <button (click)="cerrarSesion()">Cerrar sesion</button>
+
+</nav>
+<router-outlet></router-outlet>

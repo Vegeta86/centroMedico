@@ -1,0 +1,36 @@
+<h1>Listado de Pacientes</h1>
+<br>
+<p>Buscar Paciente:</p>
+<form [formGroup]="busqueda">
+<input type="text" formControlName="palabraClave" nombre="buscarPaciente">
+<button (click)="buscarPaciente()">Buscar</button>
+</form>
+<br><br>
+<table>
+  <tr>
+    <th>id</th>
+    <th>Nombre</th>
+    <th>Apellido Paterno</th>
+    <th>Apellido Materno</th>
+    <th>Sexo</th>
+    <th>Edad</th>
+    <th>Correo</th>
+    <th>Sistema de Salud</th>
+    <th>Editar</th>
+    <th>Ver</th>
+  </tr>
+
+  <tr *ngFor="let paciente of listaPacientes">
+    <td>{{paciente.id}}</td>
+    <td>{{paciente.nombre}}</td>
+    <td>{{paciente.paterno}}</td>
+    <td>{{paciente.materno}}</td>
+    <td>{{paciente.sexo}}</td>
+    <td>{{paciente.edad}}</td>
+    <td>{{paciente.correo}}</td>
+    <td>{{paciente.salud}}</td>
+    <td><button (click)="redireaccionarEditarPaciente(paciente.id)">Editar</button></td>
+    <td><button (click)="redireaccionarVerPaciente(paciente.id)" >Ver</button></td>
+  </tr>
+
+</table>

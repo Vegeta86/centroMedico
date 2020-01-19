@@ -1,0 +1,25 @@
+<h1>Crear Paciente</h1>
+<form [formGroup]="formulario">
+  <p>Nombre:</p>
+  <input type="text" formControlName="nombre" name="nombre" >
+  <p>Apellido Paterno:</p>
+  <input type="text" formControlName="paterno" name="paterno" >
+  <p>Apellido Materno:</p>
+  <input type="text" formControlName="materno" name="materno" >
+  <p>Sexo</p>
+  <select formControlName="sexo" name="sexo" id="sexo">
+    <option *ngFor="let sexo of listaSexo" [value]="sexo">{{sexo}}</option>
+  </select>
+  <p>Edad:</p>
+  <input type="text" formControlName="edad" name="edad" id="">
+  <p>Correo:</p>
+  <input type="text" formControlName="correo" name="correo" id="">
+  <p>Sistema de salud</p>
+  <select formControlName="salud" name="salud" id="salud">
+    <option *ngFor="let salud of listaSalud" [value]="salud">{{salud}}</option>
+  </select>
+  <br><br><br>
+  <button (click)="crearPaciente()">Crear Ficha</button>
+</form>
+<br><br><br>
+<hr>
