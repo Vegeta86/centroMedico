@@ -1,0 +1,257 @@
+{
+  "patologia": [
+    {
+      "nombre": "Influenza",
+      "id": 0
+    },
+    {
+      "nombre": "Sinusitis",
+      "id": 1
+    },
+    {
+      "nombre": "Lepra",
+      "id": 2
+    },
+    {
+      "nombre": "Fibromialgia",
+      "id": 3
+    },
+    {
+      "nombre": "Depresion",
+      "id": 4
+    },
+    {
+      "nombre": "Hepatitis",
+      "id": 5
+    },
+    {
+      "nombre": "Gripe",
+      "id": 6
+    },
+    {
+      "nombre": "Vomito",
+      "id": 7
+    },
+    {
+      "nombre": "Jaqueca",
+      "id": 8
+    }
+  ],
+  "fichaAtencion": [
+    {
+      "medico": "Esteban Gutierrez",
+      "paciente": "Rodrigo Ibarra Codoceo",
+      "patologia": "Gripe",
+      "descripcion": "ksjdjsdksjdksjdksdjkjd",
+      "id": 0
+    }
+  ],
+  "fichaPaciente": [
+    {
+      "nombre": "Javier",
+      "paterno": "Rivera",
+      "materno": "Caviedes",
+      "sexo": "Masculino",
+      "edad": "32",
+      "correo": "jriveracav@gmail.cl",
+      "salud": "Fonasa",
+      "id": 0
+    },
+    {
+      "nombre": "Fernanda",
+      "paterno": "Avila",
+      "materno": "Caviedes",
+      "sexo": "Femenino",
+      "edad": "30",
+      "correo": "fer@gmail.cl",
+      "salud": "Isapre",
+      "id": 1
+    },
+    {
+      "nombre": "Rodrigo",
+      "paterno": "Ibarra",
+      "materno": "Codoceo",
+      "sexo": "Masculino",
+      "edad": "39",
+      "correo": "rodrigo.ibarra@gmail.cl",
+      "salud": "Fonasa",
+      "id": 2
+    },
+    {
+      "nombre": "Valentina",
+      "paterno": "Avila",
+      "materno": "Caviedes",
+      "sexo": "Femenino",
+      "edad": "40",
+      "correo": "djhsjdhsj",
+      "salud": "Isapre",
+      "id": 3
+    },
+    {
+      "nombre": "Alexis",
+      "paterno": "Osorio",
+      "materno": "Otro Apellido",
+      "sexo": "Masculino",
+      "edad": "32",
+      "correo": "djhsjdhsj",
+      "salud": "Isapre",
+      "id": 4
+    },
+    {
+      "nombre": "Matias",
+      "paterno": "Rivera",
+      "materno": "Caviedes",
+      "sexo": "Femenino",
+      "edad": "31",
+      "correo": "djhsjdhsj",
+      "salud": "Fonasa",
+      "id": 5
+    },
+    {
+      "nombre": "Paciente",
+      "paterno": "Rivera",
+      "materno": "Caviedes",
+      "sexo": "Masculino",
+      "edad": "33",
+      "correo": "ignacio8633@gmail.cl",
+      "salud": "Isapre",
+      "id": 6
+    },
+    {
+      "nombre": "Javier",
+      "paterno": "Rivera",
+      "materno": "Caviedes",
+      "sexo": "Masculino",
+      "edad": "32",
+      "correo": "ignacio8633@gmail.cl",
+      "salud": "Fonasa",
+      "id": 7
+    },
+    {
+      "nombre": "lisette",
+      "paterno": "uribe",
+      "materno": "silva",
+      "sexo": "Femenino",
+      "edad": "27",
+      "correo": "madelyne@live.cl",
+      "salud": "Isapre",
+      "id": 8
+    },
+    {
+      "nombre": "made",
+      "paterno": "silva",
+      "materno": "Caviedes",
+      "sexo": "Femenino",
+      "edad": "32",
+      "correo": "ignacio8633@gmail.cl",
+      "salud": "Indigente",
+      "id": 9
+    },
+    {
+      "nombre": "made",
+      "paterno": "silva",
+      "materno": "Caviedes",
+      "sexo": "Femenino",
+      "edad": "32",
+      "correo": "ignacio8633@gmail.cl",
+      "salud": "Indigente",
+      "id": 10
+    },
+    {
+      "nombre": "Esteban",
+      "paterno": "Soto",
+      "materno": "Molina",
+      "sexo": "Masculino",
+      "edad": "27",
+      "correo": "djhsjdhsj@live.cl",
+      "salud": "Indigente",
+      "id": 11
+    },
+    {
+      "nombre": "Marcelo",
+      "paterno": "Contreras",
+      "materno": "Silva",
+      "sexo": "Femenino",
+      "edad": "27",
+      "correo": "correo@live.cl",
+      "salud": "Isapre",
+      "id": 12
+    },
+    {
+      "nombre": "Camilo",
+      "paterno": "Gutierrez",
+      "materno": "Leon",
+      "sexo": "Masculino",
+      "edad": "99",
+      "correo": "correo@gmail.cl",
+      "salud": "Isapre",
+      "id": 13
+    },
+    {
+      "nombre": "Alberto",
+      "paterno": "Silva",
+      "materno": "Soto",
+      "sexo": "Masculino",
+      "edad": "39",
+      "correo": "correo@gmail.cl",
+      "salud": "Isapre",
+      "id": 14
+    },
+    {
+      "nombre": "Benito",
+      "paterno": "Perez",
+      "materno": "Caviedes",
+      "sexo": "Masculino",
+      "edad": "27",
+      "correo": "correo@gmail.cl",
+      "salud": "Fonasa",
+      "id": 15
+    },
+    {
+      "nombre": "Macarena",
+      "paterno": "Perez",
+      "materno": "Mendoza",
+      "sexo": "Femenino",
+      "edad": "33",
+      "correo": "correo@gmail.cl",
+      "salud": "Fonasa",
+      "id": 16
+    },
+    {
+      "nombre": "javier",
+      "paterno": "lkj",
+      "materno": "lkj",
+      "sexo": "Masculino",
+      "edad": "33",
+      "correo": "ignacio45@gmail.com",
+      "salud": "Isapre",
+      "id": 17
+    }
+  ],
+  "medico": [
+    {
+      "usuario": "egutierrezq",
+      "nombre": "Esteban",
+      "paterno": "Gutierrez",
+      "materno": "Quezada",
+      "pass": "123456",
+      "id": 0
+    },
+    {
+      "usuario": "psepulvedar",
+      "nombre": "Pablo",
+      "paterno": "Sepulveda",
+      "materno": "Rivera",
+      "pass": "123456",
+      "id": 1
+    },
+    {
+      "usuario": "rsanchez",
+      "nombre": "Rick",
+      "paterno": "Sanchez",
+      "materno": "",
+      "pass": "123456",
+      "id": 2
+    }
+  ]
+}

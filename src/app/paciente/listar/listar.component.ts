@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Paciente } from '../paciente';
-import { PacienteService } from '../paciente.service';
+import { Paciente } from '../../modelos/paciente';
+import { PacienteService } from '../../servicios/paciente.service';
 import { Router } from '@angular/router';
 import { FormGroup, FormControl } from '@angular/forms';
 

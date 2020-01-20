@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { Medico } from './medico/medico';
+import { Medico } from './modelos/medico';
 import { Router } from '@angular/router';
-import { ComunService } from './medico/comun.service';
+import { ComunService } from './servicios/comun.service';
 
 @Component({
   selector: 'app-root',

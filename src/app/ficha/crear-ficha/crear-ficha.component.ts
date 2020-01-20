@@ -1,11 +1,11 @@
-import { Component, OnInit,EventEmitter } from '@angular/core';
-import { FormGroup, FormControl,} from '@angular/forms';
-import { Ficha } from '../ficha';
-import { Patologia } from '../patologia';
-import { FichaService } from '../ficha.service';
-import { Paciente } from '../../paciente/paciente';
-import { PacienteService } from '../../paciente/paciente.service';
-import { Medico } from '../../medico/medico';
+import { Component, OnInit, EventEmitter } from '@angular/core';
+import { FormGroup, FormControl, } from '@angular/forms';
+import { Ficha } from '../../modelos/ficha';
+import { Patologia } from '../../modelos/patologia';
+import { FichaService } from '../../servicios/ficha.service';
+import { Paciente } from '../../modelos/paciente';
+import { PacienteService } from '../../servicios/paciente.service';
+import { Medico } from '../../modelos/medico';
 
 
 @Component({
@@ -15,32 +15,32 @@ import { Medico } from '../../medico/medico';
 })
 export class CrearFichaComponent implements OnInit {
 
-  public medicoModel:Medico;
+  public medicoModel: Medico;
   public fichaAtencion: FormGroup;
   public patologiaEventEmiter: EventEmitter<Patologia>;
-  public patologia:Patologia;
+  public patologia: Patologia;
 
-  public listaPatologias:Patologia[];
-  public listaPacientes:Paciente[];
-  public ficha:Ficha;
-  public medicoFicha:string;
+  public listaPatologias: Patologia[];
+  public listaPacientes: Paciente[];
+  public ficha: Ficha;
+  public medicoFicha: string;
 
-  public medico:FormControl;
-  public paciente:FormControl;
-  public patologiaSelec:FormControl;
-  public nuevaPat:FormControl;
-  public descripcion:FormControl;
+  public medico: FormControl;
+  public paciente: FormControl;
+  public patologiaSelec: FormControl;
+  public nuevaPat: FormControl;
+  public descripcion: FormControl;
 
-  constructor(private servicio: FichaService,private pacienteServ: PacienteService) {
+  constructor(private servicio: FichaService, private pacienteServ: PacienteService) {
     this.patologiaEventEmiter = new EventEmitter<Patologia>();
-    this.listaPatologias=[];
-    this.listaPacientes=[];
-    this.medico=new FormControl();
-    this.paciente= new FormControl();
-    this.patologiaSelec=new FormControl();
-    this.nuevaPat=new FormControl();
-    this.descripcion=new FormControl();
-   }
+    this.listaPatologias = [];
+    this.listaPacientes = [];
+    this.medico = new FormControl();
+    this.paciente = new FormControl();
+    this.patologiaSelec = new FormControl();
+    this.nuevaPat = new FormControl();
+    this.descripcion = new FormControl();
+  }
 
   ngOnInit() {
     this.listarMedicos();
@@ -51,38 +51,38 @@ export class CrearFichaComponent implements OnInit {
       medico: this.medico,
       paciente: this.paciente,
       patologiaSelec: this.patologiaSelec,
-      nuevaPat:this.nuevaPat,
-      descripcion:this.descripcion
+      nuevaPat: this.nuevaPat,
+      descripcion: this.descripcion
     });
   }
 
-  listarPatologias(){
-    this.servicio.listarPatologia().subscribe(res =>{
-      this.listaPatologias=res;
+  listarPatologias() {
+    this.servicio.listarPatologia().subscribe(res => {
+      this.listaPatologias = res;
       console.log(this.listaPatologias)
     })
   }
 
-  listarPacientes(){
-    this.pacienteServ.listarPacientes().subscribe(res=>{
-      this.listaPacientes=res;
+  listarPacientes() {
+    this.pacienteServ.listarPacientes().subscribe(res => {
+      this.listaPacientes = res;
     })
   }
 
-  listarMedicos(){
+  listarMedicos() {
     this.medicoModel = JSON.parse(localStorage.getItem("medico"));
   }
 
-  crearPatologia(){
+  crearPatologia() {
     this.patologia = new Patologia();
     this.patologia.nombre = this.fichaAtencion.controls.nuevaPat.value;
-    this.servicio.crearPatologia(this.patologia).subscribe(res=>{
+    this.servicio.crearPatologia(this.patologia).subscribe(res => {
       this.patologiaEventEmiter.emit(this.patologia);
       this.listaPatologias.push(this.patologia);
     });
   }
 
-  crearFicha(){
+  crearFicha() {
     this.ficha = new Ficha(
       this.medico.value,
       this.paciente.value,
@@ -90,9 +90,9 @@ export class CrearFichaComponent implements OnInit {
       this.descripcion.value,
     );
     console.log(this.ficha);
-    this.servicio.crearFicha(this.ficha).subscribe(res=>{
-        alert("Ficha creada con exito");
-        console.log(res);
+    this.servicio.crearFicha(this.ficha).subscribe(res => {
+      alert("Ficha creada con exito");
+      console.log(res);
     });
   }
 

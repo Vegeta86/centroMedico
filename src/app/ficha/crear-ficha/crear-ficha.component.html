@@ -1,11 +1,12 @@
 <h1>Ficha de atencion</h1>
 <br><br>
-<form [formGroup]="fichaAtencion"  (patologiaEventEmiter)="crearPatologia($event)">
+<form [formGroup]="fichaAtencion" (patologiaEventEmiter)="crearPatologia()">
     <p>Medico tratante :</p>
     {{medicoModel.nombre}}
     <p>Paciente:</p>
-    <select  formControlName="paciente" name="paciente" id="patologia">
-        <option *ngFor="let paciente of listaPacientes" value="paciente.id">{{paciente.nombre+" "+paciente.paterno+" "+paciente.materno}}</option>
+    <select formControlName="paciente" name="paciente" id="patologia">
+        <option *ngFor="let paciente of listaPacientes" value="paciente.id">
+            {{paciente.nombre+" "+paciente.paterno+" "+paciente.materno}}</option>
     </select>
 
     <p>Patologia:</p>
@@ -13,7 +14,7 @@
         <option *ngFor="let patologia of listaPatologias" value="patologia.id">{{patologia.nombre}}</option>
     </select>
 
-   
+
     <p>Agregar patologia</p>
     <input formControlName="nuevaPat" type="text" name="agregarPato" id="detalleAtencion">
     <button (click)="crearPatologia()">Agregar</button>

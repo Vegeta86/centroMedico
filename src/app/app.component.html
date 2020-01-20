@@ -1,10 +1,26 @@
-<nav>
-  <a [routerLink]="['login']">Login</a>
-  <a [routerLink]="['crearPaciente']">Ficha Paciente</a>
-  <a [routerLink]="['crearFicha']">Ficha Atencion</a>
-  <a [routerLink]="['listaPacientes']">Lista Pacientes</a>
-  <a [routerLink]="['pacientes']">Historial de atenciones(Medico)</a>
-  <button (click)="cerrarSesion()">Cerrar sesion</button>
+<div class="jumbotron-fluid">
+  <div class="parallax img-fluid"></div>
+  <h1 class="text-white jumbotron">Centro Medico</h1>
+  <nav class="navbar navbar-dark bg-secondary">
+    <a [routerLink]="['login']">Login</a>
+    <a [routerLink]="['crearPaciente']">Nueva Atencion</a>
+    <a [routerLink]="['listaPacientes']">Lista de Pacientes</a>
+    <a [routerLink]="['pacientes']">Historial de atenciones(Medico)</a>
+    <div class="dropdown">
+      <button class="btn btn-warning dropdown-toggle text-white" type="button" id="dropdownMenuButton"
+        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Configuracion
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#">Temas</a>
+        <a class="dropdown-item" href="#">Tamaño de interfaz</a>
+        <a class="dropdown-item" href="#">Configuracion de perfil</a>
+      </div>
+    </div>
+    <button class="btn btn-warning text-white" (click)="cerrarSesion()">Cerrar sesion</button>
+  </nav>
+</div>
 
-</nav>
+
+
 <router-outlet></router-outlet>
